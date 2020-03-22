@@ -82,9 +82,11 @@ export default {
           localStorage.setItem("user_token", datas.data.token);
           this.$router.push("/articles");
         })
-        .catch(error => {
+        .catch(() => {
           this.errors = [];
-          this.errors.push("Echec de la connexion : mail ou mot de passe incorrect")
+          this.errors.push(
+            "Echec de la connexion : mail ou mot de passe incorrect"
+          );
         });
     },
 

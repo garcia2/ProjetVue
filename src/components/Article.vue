@@ -54,9 +54,7 @@ export default {
         .delete(
           this.$store.state.apiUrl + "secure/article/" + this.article_title
         )
-        .then(response => {
-          this.$router.push("/articles");
-        });
+        .then(this.$router.push("/articles"));
     },
 
     isOwner() {
