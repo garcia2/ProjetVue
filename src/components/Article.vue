@@ -55,13 +55,11 @@ export default {
           this.$store.state.apiUrl + "secure/article/" + this.article_title
         )
         .then(response => {
-          console.log(response);
           this.$router.push("/articles");
         });
     },
 
     isOwner() {
-      console.log(JSON.parse(localStorage.getItem("user")).user_mail);
       return (
         this.owner_mail === JSON.parse(localStorage.getItem("user")).user_mail
       );
